@@ -1,0 +1,16 @@
+{
+    "name": "ngx-editor",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:machuanjia/ngx-editor.git"
+    },
+    "es2015": "bundles/ngx-editor.es2015.js",
+    "peerDependencies": {
+        "@angular/common": "*",
+        "@angular/compiler": "*",
+        "@angular/core": "*",
+        "@angular/forms": "*",
+        "typescript": "*",
+        "rxjs": "*"
+    }
+}
