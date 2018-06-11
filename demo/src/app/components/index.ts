@@ -1,7 +1,7 @@
-import { DemoButtonSectionComponent } from './+button/button-section.component';
+import { DemoEditorComponent } from './+editor/editor.component';
 
 export const COMPONENTS = [
-    DemoButtonSectionComponent
+    DemoEditorComponent
 ];
 
 export const ENTRY_COMPONENTS = [

@@ -1,9 +1,9 @@
-import { DemoButtonSectionComponent } from './components/+button/button-section.component';
+import { DemoEditorComponent } from './components/+editor/editor.component';
 
 const appRoutes = [
     {
         path: '',
-        component: DemoButtonSectionComponent
+        component: DemoEditorComponent
     }
 ];
 

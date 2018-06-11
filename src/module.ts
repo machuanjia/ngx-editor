@@ -1,18 +1,17 @@
 import { Component, NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { ThyButtonModule } from './button';
+import { NgxEditorComponent } from './editor/editor.component';
 
 @NgModule({
     declarations: [
+        NgxEditorComponent
     ],
     imports: [
         BrowserAnimationsModule,
-        ThyButtonModule
     ],
     exports: [
         BrowserAnimationsModule,
-        ThyButtonModule
+        NgxEditorComponent
     ],
     providers: [
     ]

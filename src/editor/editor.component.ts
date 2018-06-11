@@ -1,9 +1,9 @@
 import { Component, Directive, Input, ElementRef, Renderer2, ViewEncapsulation, OnInit } from '@angular/core';
 @Component({
-    selector: '[thy-button],[thyButton]',
-    templateUrl: './button.component.html'
+    selector: '[ngx-editor],[ngxEditor]',
+    templateUrl: './editor.component.html'
 })
-export class ThyButtonComponent implements OnInit {
+export class NgxEditorComponent implements OnInit {
 
     constructor(
         private elementRef: ElementRef,
