@@ -1,6 +1,6 @@
-import { Component, Directive, Input, ElementRef, Renderer2, ViewEncapsulation, OnInit, forwardRef } from '@angular/core';
+import { Component, Input, ElementRef, Renderer2, OnInit, forwardRef, ViewChild, TemplateRef, ViewContainerRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { FormControl, FormGroup, FormBuilder, FormsModule } from '@angular/forms';
+import { NgxEditorService } from './editor.service';
 @Component({
     selector: 'ngx-editor',
     templateUrl: './editor.component.html',
@@ -17,13 +17,16 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
 
     public model: any;
 
-    @Input('config')
-    set config(value: {}) {
-    }
+    @Input() config: {};
+
+    public className: String = '';
+
+    public header_action: Boolean = false;
 
     constructor(
         private elementRef: ElementRef,
         private renderer: Renderer2,
+        public ngxEditorService: NgxEditorService,
     ) {
     }
 
@@ -52,6 +55,16 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
         this.onModelChange(this.model);
     }
 
-    ngOnInit() {
+    setHeaderLi(id: string): void {
+        this.header_action = !this.header_action;
+    }
+
+    styleFn(name: string, event: Event) {
+
+    }
+
+
+    ngOnInit(): void {
+        this.ngxEditorService.initEditor(this.config, this.elementRef);
     }
 }
